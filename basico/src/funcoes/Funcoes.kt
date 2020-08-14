@@ -2,6 +2,7 @@ package funcoes
 
 import java.util.*
 
+
 fun main(args: Array<String>) {
 
     println(soma(32, 43))
@@ -16,7 +17,7 @@ fun main(args: Array<String>) {
 fun soma(a: Int, b: Int): Int{
     return  a + b
 }
-fun queHoraSao(): Date{
+fun queHoraSao(): Date {
     return Date()
 }
 
