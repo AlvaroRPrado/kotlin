@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="Curso:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Curso_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Curso.jar">
+        <element id="module-output" name="Curso" />
+      </element>
+      <element id="library" level="project" name="KotlinJavaRuntime" />
+    </root>
+  </artifact>
+</component>
