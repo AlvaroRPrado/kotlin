@@ -43,7 +43,7 @@ data class Campo(val linha: Int, val coluna: Int){
             callbacks.forEach { it(this, evento) }
         }
     }
-    fun mina(){
+    fun minar(){
         minado = true
     }
     fun reiniciar(){
