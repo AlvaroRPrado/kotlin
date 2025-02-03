@@ -22,15 +22,15 @@ class Tabuleiro(val qtdeLinhas: Int, val qtdeColunas: Int, private val qtdeMinas
         var colunaSorteada = - 1
         var qtdeMinasAtual = 0
 
-        while (qtdeMinasAtual < this.qtdeMinas){
+        while (qtdeMinasAtual < this.qtdeMinas) {
             linhaSorteada = gerador.nextInt(qtdeLinhas)
             colunaSorteada = gerador.nextInt(qtdeColunas)
-        }
 
-        val campoSorteado = campos[linhaSorteada][colunaSorteada]
-        if (campoSorteado.seguro){
-            campoSorteado.minar()
-            qtdeMinasAtual++
+            val campoSorteado = campos[linhaSorteada][colunaSorteada]
+            if (campoSorteado.seguro) {
+                campoSorteado.minar()
+                qtdeMinasAtual++
+            }
         }
     }
 
@@ -77,7 +77,7 @@ class Tabuleiro(val qtdeLinhas: Int, val qtdeColunas: Int, private val qtdeMinas
         campos.forEach { linha -> linha.forEach(callback) }
     }
     fun onEvento(callback: (TabuleiroEvento) -> Unit){
-        callbacks.add { callback }
+        callbacks.add(callback)
     }
     fun reiniciar(){
         forEachCampo { it.reiniciar() }
